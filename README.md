@@ -3,11 +3,17 @@
 This project implements the paper **"GNNFingers: A Fingerprinting Framework for Verifying Ownerships of Graph Neural Networks"** (You et al., 2024). The goal is to detect unauthorized use of GNNs via graph fingerprinting without altering the original model.
 
 ## Structure
-- `models/`: GCN, GAT, GIN implementations
-- `data/`: Loaders for Cora, Citeseer, PubMed
-- `fingerprints/`: Code to generate graph fingerprints
-- `verifier/`: UniVerifier training and evaluation
-- `utils/`: Utilities and helpers
+GNNFingers/
+├── config/ # YAML configs
+├── data/ # Dataset helpers / download
+├── models/ # GCN, GraphSAGE, SimGNN, ...
+├── fingerprint/ # FingerprintBuilder & utils
+├── verifier/ # Univerifier MLP
+├── training/ # Alternating-train engine
+├── evaluation/ # Metrics & baselines
+├── utils/ # Logging, seeds, misc
+├── main.py # CLI entry-point
+└── README.md
 
 ## Getting Started
 
